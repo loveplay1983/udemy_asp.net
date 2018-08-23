@@ -1,0 +1,24 @@
+﻿@{ 
+    //ViewBag.Title = "Posts";
+    ViewBag.name = "";
+}
+
+@section Scripts
+{
+    <script>alert("hello world")</script>
+}
+
+
+<h1>Posts Index</h1>
+@if (true)  // !!!!!remember the Razer syntax let your text content contains gray background is going to ignored.
+{
+
+    <h3>hello world</h3>
+            @: hello world this is the second line of code of html text <br>
+            <text>hello world this is another line of html text</text>
+}
+
+<p><a href="@Url.RouteUrl("login")"><text>Razer syntax of Url.RouteUrl to replace a tag</text></a></p>
+@* same way as it is going to create a link button shown above *@
+<p>@Html.RouteLink("razer syntax of Html.RouteLink", "login")</p>
+

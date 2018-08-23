@@ -12,6 +12,7 @@ namespace WebApplication1.Areas.Admin.Controllers
         public ActionResult Index()
         {
             return Content("Admin Posts!");
+            //return View();
         }
     }
 }

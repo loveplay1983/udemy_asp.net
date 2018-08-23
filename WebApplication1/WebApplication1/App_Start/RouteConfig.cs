@@ -14,12 +14,17 @@ namespace WebApplication1
         {
             // Gets each sub controller where the sub controllers of area definition  their namespace value
             // And then we can use it to distinguish the different project controller and area controller...
-            var namespaces = new[ ] { typeof (PostsController).Namespace};
+            //var house = new[ ] { typeof (PostsController).Namespace};
+            var mainNamespace = new[] { typeof(AuthController).Namespace };
 
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
 
-            routes.MapRoute("Login", "login", new { controller = "Auth", action = "Login" }, namespaces);
-            routes.MapRoute("Home", "", new { controller = "Posts", action = "Index" }, namespaces);
+
+            // It is similar to django urls.py where the syntax is sth like the following:
+            // urls(r'^$',views.x,name='');
+            routes.MapRoute("Login", "login", new { controller = "Auth", action = "Login" }, mainNamespace);
+            routes.MapRoute("Home", "", new { controller = "Posts", action = "Index" }, mainNamespace);
         }
     }
 }
+    

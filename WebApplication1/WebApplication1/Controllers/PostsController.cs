@@ -10,7 +10,8 @@ namespace WebApplication1.Controllers
     {
         public ActionResult Index()
         {
-            return Content("Hello world!");
+            //return Content("<h1>Hello world!</h1>");
+            return View();
         }
     }
 }
